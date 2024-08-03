@@ -5,6 +5,8 @@ add_subdirectory(libs/glfw)
 
 add_executable(opengl_demo
     src/main.cpp
+    src/callbacks.cpp
+    src/utilities.cpp
 
     src/glad.c
 )
