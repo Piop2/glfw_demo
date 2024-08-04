@@ -2,8 +2,34 @@
 
 #include <string>
 #include <fstream>
+#include <sstream>
+#include <memory>
 
-const char* ExtractVersion(const char* full)
+inline void ReadToString(const char* filepath, std::string& out)
+{
+	std::ifstream input_file_stream(filepath);
+	if (!input_file_stream.is_open())
+	{
+		throw("invalid file path");
+	}
+	std::stringstream data_stream;
+	data_stream << input_file_stream.rdbuf();
+	out = data_stream.str();
+}
+
+inline std::string ReadToString(const char* filepath)
+{
+	std::ifstream input_file_stream(filepath);
+	if (!input_file_stream.is_open())
+	{
+		throw("invalid file path");
+	}
+	std::stringstream data_stream;
+	data_stream << input_file_stream.rdbuf();
+	return data_stream.str();
+}
+
+const char* ExtractProgramName(const char* full)
 {
 	std::string p1 = full;
 	static std::string p2;

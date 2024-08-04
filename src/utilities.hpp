@@ -2,7 +2,13 @@
 #define OPENGLDEMO_UTILITIES_H
 #pragma once
 
-const char* ExtractVersion(const char* full);
+#include <string>
+
+inline void ReadToString(const char* filepath, std::string& out);
+
+inline std::string ReadToString(const char* filepath);
+
+const char* ExtractProgramName(const char* full);
 
 void WriteLog(const char* msg);
 
