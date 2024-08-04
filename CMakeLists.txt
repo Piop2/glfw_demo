@@ -7,6 +7,12 @@ add_executable(opengl_demo
     src/main.cpp
     src/callbacks.cpp
     src/utilities.cpp
+    src/input.cpp
+    src/rendering/gl/version.cpp
+    src/rendering/gl/draw.cpp
+    src/rendering/gl/mesh_loader.cpp
+    src/rendering/gl/query_shader.cpp
+    src/rendering/gl/shader_loader.cpp
 
     src/glad.c
 )
