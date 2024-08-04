@@ -3,7 +3,7 @@
 #include <string>
 #include <fstream>
 
-const char* extract_version(const char* full)
+const char* ExtractVersion(const char* full)
 {
 	std::string p1 = full;
 	static std::string p2;
@@ -16,7 +16,7 @@ const char* extract_version(const char* full)
 }
 
 #if defined(_DEBUG)
-void write_log(const char* msg)
+void WriteLog(const char* msg)
 {
 	std::ofstream logs;
 	logs.open("our_log.txt", std::ofstream::app | std::ofstream::out);
@@ -24,7 +24,7 @@ void write_log(const char* msg)
 	logs.close();
 }
 #else
-void write_log(const char* msg)
+void WriteLog(const char* msg)
 {
 }
 #endif // _DEBUG
