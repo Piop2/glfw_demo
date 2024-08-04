@@ -4,11 +4,11 @@
 
 void GLFWErrorCallback(int error, const char* description)
 {
-	write_log(description);
+	WriteLog(description);
 	throw("glfw error");
 }
 
 void GLFWWindowCloseCallback(GLFWwindow* window)
 {
-	write_log("window closed");
+	WriteLog("window closed");
 }
