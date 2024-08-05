@@ -5,18 +5,6 @@
 #include <sstream>
 #include <memory>
 
-void ReadToString(const char* filepath, std::string& out)
-{
-	std::ifstream input_file_stream(filepath);
-	if (!input_file_stream.is_open())
-	{
-		throw("invalid file path");
-	}
-	std::stringstream data_stream;
-	data_stream << input_file_stream.rdbuf();
-	out = data_stream.str();
-}
-
 std::string ReadToString(const char* filepath)
 {
 	std::ifstream input_file_stream(filepath);
@@ -27,6 +15,19 @@ std::string ReadToString(const char* filepath)
 	std::stringstream data_stream;
 	data_stream << input_file_stream.rdbuf();
 	return data_stream.str();
+}
+
+void ReadToString(const char* filepath, std::string& out)
+{
+	// std::ifstream input_file_stream(filepath);
+	// if (!input_file_stream.is_open())
+	// {
+	// 	throw("invalid file path");
+	// }
+	// std::stringstream data_stream;
+	// data_stream << input_file_stream.rdbuf();
+	// out = data_stream.str();
+	out = ReadToString(filepath);
 }
 
 const char* ExtractProgramName(const char* full)
