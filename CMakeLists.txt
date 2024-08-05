@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.5.0)
 project(opengl_demo VERSION 0.1.0 LANGUAGES C CXX)
 
-add_subdirectory(libs/glfw)
-add_subdirectory(libs/glm)
-add_library(glad libs/glad/glad.c)
+add_subdirectory(lib/glfw)
+add_subdirectory(lib/glm)
+add_library(glad lib/glad/glad.c)
 
 add_executable(opengl_demo
     src/main.cpp
@@ -19,8 +19,8 @@ add_executable(opengl_demo
 
 target_include_directories(opengl_demo PRIVATE 
     ${PROJECT_SOURCE_DIR}/include
-    ${PROJECT_SOURCE_DIR}/libs/GLFW/include/GLFW
-    ${PROJECT_SOURCE_DIR}/libs/glm
+    ${PROJECT_SOURCE_DIR}/lib/GLFW/include/GLFW
+    ${PROJECT_SOURCE_DIR}/lib/glm
 )
 
 target_link_libraries(opengl_demo PRIVATE
