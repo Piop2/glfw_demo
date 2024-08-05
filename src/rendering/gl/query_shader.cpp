@@ -1,4 +1,4 @@
-#include "query_shader.hpp"
+#include "rendering/gl/query_shader.hpp"
 
 #include <cstdio>
 

@@ -1,4 +1,4 @@
-#include "shader_loader.hpp"
+#include "rendering/gl/shader_loader.hpp"
 
 #include <vector>
 

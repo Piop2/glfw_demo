@@ -1,8 +1,8 @@
-#include "draw.hpp"
+#include "rendering/gl/draw.hpp"
 
 #include <vector>
 
-#include "draw_details.hpp"
+#include "rendering/gl/draw_details.hpp"
 
 void Draw(const std::vector<DrawDetails>& details)
 {

@@ -1,11 +1,11 @@
-#include "mesh_loader.hpp"
+#include "rendering/gl/mesh_loader.hpp"
 
 #include <vector>
 
 #include <glad/glad.h>
 
-#include "draw_details.hpp"
-#include "vertex.hpp"
+#include "rendering/gl/draw_details.hpp"
+#include "rendering/gl/vertex.hpp"
 
 DrawDetails UploadMesh(
     const std::vector<Vertex>& mesh,
