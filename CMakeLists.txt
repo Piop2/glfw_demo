@@ -28,8 +28,8 @@ target_link_libraries(opengl_demo PRIVATE
     ${GLFW_LIBRARIES}
 )
 
-set(GLSL_DIR ${CMAKE_SOURCE_DIR}/glsl/)
-set(GLSL_OUT_DIR $<TARGET_FILE_DIR:opengl_demo>/glsl)
+set(ASSET_DIR ${CMAKE_SOURCE_DIR}/asset/)
+set(ASSET_DIR_OUT $<TARGET_FILE_DIR:opengl_demo>/asset)
 add_custom_command(TARGET opengl_demo POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy_directory ${GLSL_DIR} ${GLSL_OUT_DIR}
+    COMMAND ${CMAKE_COMMAND} -E copy_directory ${ASSET_DIR} ${ASSET_DIR_OUT}
 )

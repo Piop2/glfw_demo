@@ -33,8 +33,8 @@ int main(int argc, char** argv){
 	glfwSetWindowCloseCallback(window, GLFWWindowCloseCallback);
 	glfwSetFramebufferSizeCallback(window, GLFWFramebufferSizeCallback);
 
-	std::string vertshader = ReadToString("./glsl/vertex_shader.glsl");
-	std::string fragshader = ReadToString("./glsl/fragment_shader.glsl");
+	std::string vertshader = ReadToString("./asset/glsl/vertex_shader.glsl");
+	std::string fragshader = ReadToString("./asset/glsl/fragment_shader.glsl");
 
 	unsigned int mainShader = LoadShader(vertshader.c_str(), fragshader.c_str());
 	glClearColor(.3f, .3f, .9f, 0.f);
