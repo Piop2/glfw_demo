@@ -5,7 +5,7 @@
 #include <sstream>
 #include <memory>
 
-inline void ReadToString(const char* filepath, std::string& out)
+void ReadToString(const char* filepath, std::string& out)
 {
 	std::ifstream input_file_stream(filepath);
 	if (!input_file_stream.is_open())
@@ -17,7 +17,7 @@ inline void ReadToString(const char* filepath, std::string& out)
 	out = data_stream.str();
 }
 
-inline std::string ReadToString(const char* filepath)
+std::string ReadToString(const char* filepath)
 {
 	std::ifstream input_file_stream(filepath);
 	if (!input_file_stream.is_open())

@@ -4,9 +4,8 @@
 
 #include <string>
 
-inline void ReadToString(const char* filepath, std::string& out);
-
-inline std::string ReadToString(const char* filepath);
+void ReadToString(const char* filepath, std::string& out);
+std::string ReadToString(const char* filepath);
 
 const char* ExtractProgramName(const char* full);
 
